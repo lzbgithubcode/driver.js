@@ -1,7 +1,7 @@
 {
-  "name": "driver.js",
-  "version": "0.9.8",
-  "description": "A light-weight, no-dependency, vanilla JavaScript library to drive the user's focus across the page",
+  "name": "vue-driver",
+  "version": "1.0.0",
+  "description": "自定义操作引导",
   "main": "dist/driver.min.js",
   "types": "types/index.d.ts",
   "scripts": {
@@ -11,11 +11,11 @@
     "deploy-demo": "NODE_DEBUG=gh-pages gh-pages -d dist/demo"
   },
   "bugs": {
-    "url": "https://github.com/kamranahmedse/driver.js/issues"
+    "url": "https://github.com/lzbgithubcode/driver.js/issues"
   },
-  "homepage": "https://github.com/kamranahmedse/driver.js#readme",
-  "repository": "https://github.com/kamranahmedse/driver.js",
-  "author": "Kamran Ahmed <kamranahmed.se@gmail.com>",
+  "homepage": "https://github.com/lzbgithubcode/driver.js#readme",
+  "repository": "https://github.com/lzbgithubcode/driver.js",
+  "author": "刘子彬",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.4.5",

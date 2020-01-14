@@ -213,7 +213,12 @@ export default class Popover extends Element {
     } else {
       // @todo modify CSS to use block
       this.nextBtnNode.style.display = 'inline-block';
-      this.prevBtnNode.style.display = 'inline-block';
+      // lzb2020-01-14
+      if (this.options.isFirst) {
+        this.prevBtnNode.style.display = 'none';
+      } else {
+        this.prevBtnNode.style.display = 'inline-block';
+      }
       this.closeBtnNode.classList.remove(CLASS_CLOSE_ONLY_BTN);
     }
 
@@ -229,6 +234,24 @@ export default class Popover extends Element {
       this.nextBtnNode.innerHTML = this.options.doneBtnText;
     } else {
       this.nextBtnNode.innerHTML = this.options.nextBtnText;
+    }
+    // lzb-2020-01-14 -校验
+    if (this.options.prevBtnText == null || this.options.prevBtnText.length === 0) {
+      this.prevBtnNode.style.display = 'none';
+    } else {
+      this.prevBtnNode.style.display = 'inline-block';
+    }
+
+    if (this.options.nextBtnText == null || this.options.nextBtnText.length === 0) {
+      this.nextBtnNode.style.display = 'none';
+    } else {
+      this.nextBtnNode.style.display = 'inline-block';
+    }
+
+    if (this.options.closeBtnText == null || this.options.closeBtnText.length === 0) {
+      this.closeBtnNode.style.display = 'none';
+    } else {
+      this.closeBtnNode.style.display = 'inline-block';
     }
   }
 
