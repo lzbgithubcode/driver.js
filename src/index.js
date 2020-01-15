@@ -42,6 +42,7 @@ export default class Driver {
       onReset: () => null,              // When overlay is about to be cleared
       onNext: () => null,               // When next button is clicked
       onPrevious: () => null,           // When previous button is clicked
+      onClose: () => null,              // When close button is clicked
       ...options,
     };
 
@@ -309,6 +310,12 @@ export default class Driver {
     this.currentStep = 0;
     this.isActivated = false;
     this.overlay.clear(immediate);
+
+    // Call the bound `onClose` handler if available
+    const currentStep = this.steps[this.currentStep];
+    if (currentStep && currentStep.options && currentStep.options.onClose) {
+      currentStep.options.onClose(this.overlay.highlightedElement);
+    }
   }
 
   /**

@@ -6,11 +6,19 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       element: document.getElementById('driver-demo-head'),
       popover: {
-        className: 'scoped-driver-popover',
+        className: '第一个',
         title: 'Before we start',
-        description: 'This is just one use-case, make sure to check out the rest of the docs below.',
-        nextBtnText: 'Okay, Start!',
+        description: '这个是第一个测试',
+        doneBtnText: "完成",
+        nextBtnText: "下一步",
+
       },
+      onClose: function (val) {
+          console.log('--------点击关闭', val);
+      },
+      onNext: function (val) {
+        console.log('--------点击下一步', val);
+      }
     }, {
       element: '#logo_img',
       popover: {
