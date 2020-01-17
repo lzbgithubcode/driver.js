@@ -1,6 +1,6 @@
 {
   "name": "vue-tibi-driver",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "自定义操作引导",
   "main": "dist/driver.min.js",
   "types": "types/index.d.ts",

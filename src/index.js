@@ -307,15 +307,14 @@ export default class Driver {
    * @public
    */
   reset(immediate = false) {
-    this.currentStep = 0;
-    this.isActivated = false;
-    this.overlay.clear(immediate);
-
-    // Call the bound `onClose` handler if available
+    // 点击关闭按钮-lzb
     const currentStep = this.steps[this.currentStep];
     if (currentStep && currentStep.options && currentStep.options.onClose) {
       currentStep.options.onClose(this.overlay.highlightedElement);
     }
+    this.currentStep = 0;
+    this.isActivated = false;
+    this.overlay.clear(immediate);
   }
 
   /**

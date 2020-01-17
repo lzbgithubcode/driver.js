@@ -143,6 +143,11 @@ export default class Overlay {
       this.options.onReset(this.highlightedElement);
     }
 
+    // lzb-关闭
+    if (this.options.onClose) {
+      this.options.onClose(this.highlightedElement);
+    }
+
     // Deselect the highlighted element if any
     if (this.highlightedElement) {
       const hideStage = true;
